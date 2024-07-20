@@ -78,6 +78,106 @@
         display: flex
         justify-content: center
         padding-top: 80px
+.article
+    padding-bottom: 116px
+    position: relative
+    &__cloud
+        position: absolute
+        top: -100px
+        right: 0
+        display: flex
+    &__title
+        margin: 0
+        margin-bottom: 48px
+        max-width: 740px
+        font-family: 'Indira K'
+        font-weight: 400
+        font-size: 46px
+        line-height: 109%
+        background: linear-gradient(90deg, #fff 0%, #727a8d 100%)
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    &__img
+        height: 440px
+        display: flex
+        width: 100%
+        border-radius: 10px
+        overflow: hidden
+        position: relative
+        margin-bottom: 52px
+        &::after
+            content: ""
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: url("../img/article-mask.svg") center no-repeat
+            background-size: cover
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__date
+        margin-bottom: 42px
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+        color: #7d8599
+    &__first
+        margin-top: 0
+        margin-bottom: 42px
+        font-weight: 400
+        font-size: 20px
+        line-height: 150%
+        color: #fff
+        padding-right: 46px
+    &__text
+        padding-right: 46px
+        font-weight: 300
+        font-size: 16px
+        line-height: 156%
+        color: #fff
+        p
+            margin-top: 0
+            margin-bottom: 42px
+            b
+                font-weight: 400
+            a
+                font-weight: 400
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $osnovnoy-siniy
+        ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+            margin-bottom: 36px
+            margin-top: -28px
+            li
+                margin-bottom: 13px
+                padding-left: 22px
+                position: relative
+                &::before
+                    content: ""
+                    display: block
+                    width: 4px
+                    height: 4px
+                    position: absolute
+                    left: 0
+                    top: 9px
+                    border-radius: 50%
+                    background: $osnovnoy-siniy
+    &__share
+        display: flex
+        align-items: flex-end
+        font-weight: 400
+        font-size: 20px
+        line-height: 100%
+        color: #fff
+        grid-gap: 20px
 @media(max-width: 991px)
     .blog
         &__wrap
@@ -107,3 +207,48 @@
             line-height: 160%
         &__bottom
             padding-top: 40px
+    .article
+        padding-bottom: 42px
+        &__title
+            font-size: 28px
+            line-height: 129%
+            margin-bottom: 32px
+        &__img
+            margin-bottom: 32px
+            height: 320px
+            &::after
+                background: url("../img/article-mask2.svg") center no-repeat
+                background-size: cover
+        &__date
+            font-size: 14px
+            line-height: 171%
+            margin-bottom: 24px
+        &__first
+            padding-right: 0
+            margin-bottom: 25px
+            font-size: 18px
+            line-height: 144%
+        &__text
+            padding-right: 0
+            font-size: 15px
+            line-height: 160%
+            p
+                margin-bottom: 30px
+            ul
+                margin-top: -8px
+                margin-bottom: 30px
+        &__share
+            font-size: 18px
+            line-height: 167%
+            flex-direction: column
+            align-items: flex-start
+            grid-gap: 0
+            &>span
+                display: block
+                margin-bottom: 10px
+        &__cloud
+            width: 575px
+            top: 300px
+            img
+                width: 100%
+                height: auto

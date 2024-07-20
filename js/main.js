@@ -24,3 +24,9 @@ headerBurg.addEventListener("click", (e) => {
         body.style.overflow = "visible";
     }
 });
+
+function phoneInputValidation(event) {
+    if (!("1234567890+\(\)\- ".indexOf(event.key) != -1)) {
+        event.preventDefault();
+    }
+}

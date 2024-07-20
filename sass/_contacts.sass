@@ -1,0 +1,205 @@
+.contacts
+    padding-bottom: 122px
+    position: relative
+    &__cloud1
+        position: absolute
+        top: -200px
+        right: 0
+        display: flex
+        pointer-events: none
+    &__cloud2
+        position: absolute
+        bottom: -400px
+        left: 0
+        display: flex
+        pointer-events: none
+    .container
+        position: relative
+        z-index: 3
+    &__map
+        padding-top: 121px
+        border-top: 1px solid #7d8599
+        display: flex
+        iframe
+            border-radius: 10px
+    &__wrap
+        padding-bottom: 110px
+    &__title
+        font-family: 'Indira K'
+        margin-bottom: 48px
+        margin-top: 0
+        font-weight: 400
+        font-size: 46px
+        line-height: 109%
+        background: linear-gradient(90deg, #fff 0%, #727a8d 100%)
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        max-width: 500px
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: 60px
+    &__left
+        grid-column: span 2
+        padding-right: 85px
+        padding-top: 16px
+    &__form
+        grid-column: span 3
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 26px 40px
+        button
+            cursor: pointer
+        &>input
+            background: transparent
+            border: 0
+            border-radius: 0
+            padding: 16px 0
+            border-bottom: 1px solid #7d8599
+            font-weight: 300
+            font-size: 16px
+            line-height: 162%
+            color: #fff
+            &::placeholder
+                color: #7d8599
+            &:nth-child(1), &:nth-child(4)
+                grid-column: span 2
+    &__subtitle
+        margin-bottom: 58px
+        font-weight: 400
+        font-size: 20px
+        line-height: 150%
+        color: #fff
+    &__bottom
+        grid-column: span 2
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        padding-top: 24px
+    &__check
+        position: relative
+        width: 453px
+        max-width: calc(100% - 250px)
+        display: flex
+        align-items: flex-start
+        padding-bottom: 4px
+        p
+            max-width: calc(100% - 40px)
+            margin: 0
+            font-weight: 300
+            font-size: 14px
+            line-height: 143%
+            color: #7d8599
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            height: 0
+            overflow: hidden
+            opacity: 0
+            visibility: hidden
+            padding: 0
+            margin: 0
+            & + span
+                border: 1px solid #7d8599
+                border-radius: 3px
+                width: 18px
+                height: 18px
+                position: relative
+                margin-right: 20px
+                margin-top: 3px
+                &::after
+                    content: ""
+                    display: block
+                    border-radius: 2px
+                    width: 10px
+                    height: 10px
+                    background: $osnovnoy-siniy
+                    position: absolute
+                    top: 3px
+                    left: 3px
+                    opacity: 0
+                    transition: all 0.3s
+            &:checked + span::after
+                opacity: 1
+    &__row
+        font-weight: 300
+        font-size: 20px
+        line-height: 150%
+        color: #7d8599
+        margin-top: 52px
+        b
+            font-weight: 300
+            color: #fff
+        a
+            color: #fff
+            text-decoration: none
+            &:hover
+                opacity: 0.8
+@media(max-width: 1199px)
+    .contacts
+        &__left
+            padding-right: 0
+@media(max-width: 991px)
+    .contacts
+        &__wrap
+            display: block
+        &__left
+            margin-bottom: 50px
+        &__subtitle
+            margin-bottom: 22px
+        &__row
+            margin-top: 20px
+@media(max-width: 575px)
+    .contacts
+        padding-bottom: 52px
+        &__cloud2
+            display: none
+        &__cloud1
+            width: 500px
+            top: 100px
+            img
+                max-width: 100%
+                height: auto
+        &__title
+            font-size: 28px
+            line-height: 129%
+            margin-bottom: 22px
+        &__subtitle
+            margin-bottom: 0
+            font-size: 18px
+            line-height: 167%
+        &__row
+            margin-top: 22px
+            font-size: 18px
+            line-height: 144%
+        &__left
+            margin-bottom: 25px
+        &__form
+            display: block
+            & > input
+                margin-bottom: 22px
+                width: 100%
+                font-size: 15px
+                line-height: 167%
+        &__bottom
+            padding-top: 16px
+            flex-direction: column
+        &__check
+            width: 100%
+            max-width: 100%
+            padding-bottom: 36px
+            p
+                font-size: 12px
+                line-height: 150%
+            input
+                & + span
+                    margin-top: 0
+        &__wrap
+            padding-bottom: 60px
+        &__map
+            padding-top: 60px
+            iframe
+                height: 320px
