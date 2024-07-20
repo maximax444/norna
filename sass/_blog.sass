@@ -1,0 +1,109 @@
+.blog
+    padding-bottom: 120px
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 50px
+    &__block
+        text-decoration: none
+        &:hover
+            .blog
+                &__img img
+                    transform: scale(1.1)
+                &__cont
+                    border: 1px solid $osnovnoy-siniy
+                    border-top: 0
+                &__date
+                    color: $osnovnoy-siniy
+        &:nth-child(4n + 2), &:nth-child(4n + 3)
+            .blog__img::after
+                background: url("../img/blog-cloud2.svg") center no-repeat
+                background-size: cover
+    &__img
+        display: flex
+        border-radius: 10px 10px 0 0
+        height: 325px
+        overflow: hidden
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            filter: grayscale(1)
+            transition: all 1s
+        &::after
+            content: ""
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: url("../img/blog-cloud1.svg") center no-repeat
+            background-size: cover
+    &__cont
+        padding: 28px 27px 110px
+        display: block
+        position: relative
+        border: 1px solid transparent
+        border-top: 0
+        border-radius: 0 0 10px 10px
+        transition: all 0.3s
+    &__date
+        display: block
+        margin-bottom: 16px
+        font-weight: 400
+        font-size: 14px
+        line-height: 171%
+        color: #7d8599
+        transition: all 0.3s
+    &__name
+        display: block
+        margin-bottom: 16px
+        font-weight: 400
+        font-size: 20px
+        line-height: 150%
+        color: #fff
+    &__text
+        font-weight: 300
+        font-size: 16px
+        line-height: 156%
+        color: #7d8599
+        display: block
+    &__btn
+        position: absolute
+        bottom: 32px
+        right: 27px
+    &__bottom
+        display: flex
+        justify-content: center
+        padding-top: 80px
+@media(max-width: 991px)
+    .blog
+        &__wrap
+            grid-template-columns: repeat(1, 1fr)
+@media(max-width: 575px)
+    .blog
+        padding-bottom: 52px
+        &__wrap
+            grid-gap: 42px
+        &__cont
+            padding: 25px 20px 100px
+        &__btn
+            right: 20px
+            bottom: 20px
+        &__date
+            margin-bottom: 14px
+            font-size: 12px
+            line-height: 200%
+        &__name
+            font-size: 18px
+            line-height: 144%
+            margin-bottom: 15px
+            br
+                display: none
+        &__text
+            font-size: 15px
+            line-height: 160%
+        &__bottom
+            padding-top: 40px
