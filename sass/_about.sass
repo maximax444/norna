@@ -1,0 +1,236 @@
+.about
+    &-ex
+        padding-top: 107px
+        padding-bottom: 111px
+        background: linear-gradient(180deg, rgba(52, 58, 66, 0.07) 0%, rgba(26, 29, 33, 0.07) 49.5%, rgba(52, 58, 66, 0.07) 100%)
+        &__title
+            margin: 0
+            margin-bottom: 26px
+            max-width: 550px
+            font-family: 'Indira K'
+            font-weight: 400
+            font-size: 46px
+            line-height: 91%
+            background: linear-gradient(90deg, #fff 0%, #727a8d 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        &__subtitle
+            font-weight: 300
+            max-width: 600px
+            font-size: 20px
+            line-height: 150%
+            color: #fff
+            margin-bottom: 58px
+        &__wrap
+            margin-bottom: 62px
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 20px
+        &__block
+            padding: 38px 42px 25px
+            border-radius: 10px
+            position: relative
+            &::after
+                padding: 0 1px
+                content: ""
+                display: block
+                width: calc(100%)
+                height: calc(100%)
+                position: absolute
+                top: -1px
+                left: -1px
+                border-radius: 10px
+                z-index: -1
+                inset: 0
+                background: linear-gradient(180deg, rgba(#205EE5, 0) 0%, rgba(#205EE5, 1) 100%)
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                mask-composite: exclude
+        &__icon
+            width: 72px
+            height: 72px
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 10px
+            padding: 2px 0 0 2px
+            background: linear-gradient(180deg, rgba(52, 58, 66, 0) 0%, rgba(0, 0, 0, .1) 100%)
+            position: relative
+            margin-bottom: 30px
+            *
+                transition: all 0.3s
+            &::after
+                padding: 1px
+                content: ""
+                display: block
+                width: calc(100%)
+                height: calc(100%)
+                position: absolute
+                top: -1px
+                left: -1px
+                border-radius: 10px
+                z-index: -1
+                inset: 0
+                background: linear-gradient(180deg, rgba(#fff, 0) 0%, rgba(#205EE5, 1) 100%)
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                mask-composite: exclude
+        &__descr
+            font-weight: 300
+            font-size: 16px
+            line-height: 156%
+            color: #fff
+            padding-right: 40px
+        &__text
+            font-weight: 300
+            font-size: 20px
+            line-height: 150%
+            color: #7d8599
+            margin: 0
+            b
+                font-weight: 300
+                color: #fff
+    &-last
+        padding-top: 107px
+        padding-bottom: 113px
+        &__title
+            margin-top: 0
+            max-width: 740px
+            margin-bottom: 43px
+            font-family: 'Indira K'
+            font-weight: 400
+            font-size: 46px
+            line-height: 91%
+            background: linear-gradient(90deg, #fff 0%, #727a8d 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        &__top
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            margin-bottom: 52px
+        &__descr
+            margin: 0
+            padding-right: 113px
+            font-weight: 350
+            font-size: 20px
+            line-height: 150%
+            color: #fff
+        &__small
+            margin: 0
+            padding-right: 24px
+            font-weight: 350
+            font-size: 16px
+            line-height: 156%
+            color: #7d8599
+        &__img
+            margin-bottom: 50px
+            height: 440px
+            height: 440px
+            display: flex
+            width: 100%
+            border-radius: 10px
+            overflow: hidden
+            position: relative
+            margin-bottom: 52px
+            &::after
+                content: ""
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                background: url("../img/article-mask.svg") center no-repeat
+                background-size: cover
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__text
+            margin: 0
+            font-weight: 300
+            font-size: 20px
+            line-height: 150%
+            color: #fff
+@media(max-width: 1349px)
+    .about
+        &-ex
+            &__descr
+                padding-right: 0
+        &-last
+            &__descr
+                padding-right: 42px
+@media(max-width: 991px)
+    .about
+        &-ex
+            &__wrap
+                grid-template-columns: repeat(1, 1fr)
+        &-last
+            &__top
+                grid-template-columns: repeat(1, 1fr)
+            &__descr
+                padding-right: 0
+                margin-bottom: 32px
+            &__small
+                padding-right: 0
+@media(max-width: 767px)
+    .about
+        &-last
+            &__title
+                line-height: 129%
+@media(max-width: 575px)
+    .about
+        &-ex
+            padding: 48px 0
+            &__title
+                font-size: 28px
+                line-height: 129%
+                margin-bottom: 21px
+            &__subtitle
+                font-size: 18px
+                line-height: 144%
+                margin-bottom: 32px
+            &__wrap
+                grid-gap: 10px
+                margin-bottom: 32px
+            &__block
+                min-height: 162px
+                padding: 22px
+                display: flex
+                align-items: center
+                justify-content: space-between
+            &__descr
+                max-width: calc(100% - 95px)
+                font-size: 15px
+                line-height: 160%
+            &__icon
+                margin-bottom: 0
+            &__text
+                font-size: 18px
+                line-height: 144%
+        &-last
+            padding-top: 32px
+            padding-bottom: 44px
+            &__title
+                max-width: 280px
+                margin-bottom: 22px
+                font-size: 28px
+                line-height: 129%
+            &__descr
+                font-size: 18px
+                line-height: 144%
+                margin-bottom: 30px
+            &__top
+                margin-bottom: 32px
+            &__small
+                font-size: 15px
+                line-height: 160%
+            &__img
+                height: 320px
+                margin-bottom: 30px
+                &::after
+                    background: url("../img/article-mask2.svg") center no-repeat
+                    background-size: cover
+            &__text
+                font-size: 18px
+                line-height: 144%
