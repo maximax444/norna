@@ -1,4 +1,10 @@
 .about
+    &-main
+        &__title
+            margin-right: -50px
+        &__descr
+            max-width: 460px
+            margin-bottom: 0
     &-ex
         padding-top: 107px
         padding-bottom: 111px
@@ -175,6 +181,12 @@
                 padding-right: 0
 @media(max-width: 767px)
     .about
+        &-main
+            padding-bottom: 366px
+            &__title
+                margin-right: 0
+            &__blur
+                height: calc(100% - 366px)
         &-last
             &__title
                 line-height: 129%
