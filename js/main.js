@@ -30,3 +30,28 @@ function phoneInputValidation(event) {
         event.preventDefault();
     }
 }
+
+const swiper2 = new Swiper('.about-gal__slider', {
+
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    loop: false,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.about-gal__next',
+        prevEl: '.about-gal__prev',
+    },
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: "auto",
+            spaceBetween: 10
+        },
+        // when window width is >= 480px
+        576: {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+        }
+    }
+});
