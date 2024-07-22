@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NORNA GROUP</title>
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
     <div class="fullpage">
-        <header class="header">
+        <header class="header" data-aos="fade-down" data-aos-duration="1000">
             <div class="container">
                 <div class="header__wrap">
                     <a href="/" class="header__logo">
@@ -38,37 +44,45 @@
                     <img src="img/contacts-cloud2.svg" alt="">
                 </div>
                 <div class="container">
-                    <h1 class="contacts__title">Контакты</h1>
+                    <h1 class="contacts__title" data-aos="fade-up" data-aos-duration="500">Контакты</h1>
                     <div class="contacts__wrap">
                         <div class="contacts__left">
-                            <div class="contacts__subtitle">ООО «НОРНА ГРУПП»</div>
-                            <div class="contacts__row">
+                            <div class="contacts__subtitle" data-aos="fade-right" data-aos-duration="500"
+                                data-aos-delay="200">ООО «НОРНА ГРУПП»</div>
+                            <div class="contacts__row" data-aos="fade-right" data-aos-duration="500"
+                                data-aos-delay="300">
                                 Адрес: <b>109651, Город Москва, ул. Перерва, дом 16, помещение 16 П</b>
                             </div>
-                            <div class="contacts__row">
-                                Телефон: <a href="tel:+7 (967)-067-1000">+7 (967)-067-1000</a> 
+                            <div class="contacts__row" data-aos="fade-right" data-aos-duration="500"
+                                data-aos-delay="400">
+                                Телефон: <a href="tel:+7 (967)-067-1000">+7 (967)-067-1000</a>
                             </div>
-                            <div class="contacts__row">
+                            <div class="contacts__row" data-aos="fade-right" data-aos-duration="500"
+                                data-aos-delay="500">
                                 E-mail: <a href="mailto:info@nornagroup.ru">info@nornagroup.ru</a>
                             </div>
                         </div>
-                        <form class="contacts__form">
+                        <form class="contacts__form" data-aos="fade-left" data-aos-duration="1000">
                             <input type="text" placeholder="Ваше имя*" required>
                             <input type="tel" placeholder="Телефон*" onkeypress="phoneInputValidation(event)" required>
                             <input type="email" placeholder="E-mail*" required>
-                            <input type="text" placeholder="Ваш вопрос" >
+                            <input type="text" placeholder="Ваш вопрос">
                             <div class="contacts__bottom">
                                 <label class="contacts__check">
                                     <input type="checkbox" checked required>
                                     <span></span>
-                                    <p>Нажимая на кнопку «Отправить», Вы даете согласие на обработку своих персональных данных.
+                                    <p>Нажимая на кнопку «Отправить», Вы даете согласие на обработку своих персональных
+                                        данных.
                                     </p>
                                 </label>
                                 <button class="btn contacts__btn">
                                     <span>Отправить</span>
-                                    <svg width="32" height="5" viewBox="0 0 32 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M31.0796 2.92844C31.1967 2.81129 31.1967 2.62134 31.0796 2.50418L29.1704 0.594991C29.0532 0.477833 28.8633 0.477833 28.7461 0.594991C28.629 0.712148 28.629 0.902097 28.7461 1.01925L30.4432 2.71631L28.7461 4.41337C28.629 4.53052 28.629 4.72047 28.7461 4.83763C28.8633 4.95479 29.0532 4.95479 29.1704 4.83763L31.0796 2.92844ZM0.970703 3.01631L30.8674 3.01631L30.8674 2.41631L0.970703 2.41631L0.970703 3.01631Z" fill="white" />
-                                      </svg>
+                                    <svg width="32" height="5" viewBox="0 0 32 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.0796 2.92844C31.1967 2.81129 31.1967 2.62134 31.0796 2.50418L29.1704 0.594991C29.0532 0.477833 28.8633 0.477833 28.7461 0.594991C28.629 0.712148 28.629 0.902097 28.7461 1.01925L30.4432 2.71631L28.7461 4.41337C28.629 4.53052 28.629 4.72047 28.7461 4.83763C28.8633 4.95479 29.0532 4.95479 29.1704 4.83763L31.0796 2.92844ZM0.970703 3.01631L30.8674 3.01631L30.8674 2.41631L0.970703 2.41631L0.970703 3.01631Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </div>
                         </form>
@@ -180,6 +194,14 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/main.js"></script>
 </body>
 
